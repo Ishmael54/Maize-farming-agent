@@ -17,7 +17,5 @@ This agent bridges the advisory gap by delivering accurate, personalized, and ev
 
         6. Yield Prediction Agent : Provides expected yield ranges based on region, farm practices, and input usage.
   
-================
 TECHNOLOGY USED
-================
-LLM Framework, Google ADK (ADK) ,google_search which is the search tool, Language Model	Gemini 2.5 flash and python
+=> LLM Framework, Google ADK (ADK) ,google_search which is the search tool, Language Model	Gemini 2.5 flash and python
