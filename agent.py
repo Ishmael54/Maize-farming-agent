@@ -11,7 +11,7 @@ try:
     os.environ["GOOGLE_API_KEY"] = "MY_GEMINI_API"
     print("OK")
 except Exception as e:
-    print(f"Could not retrieve GOOGLE_API_KEY from Colab secrets: {e}")
+    print(f"Could not retrieve GOOGLE_API_KEY")
 
 #Climate agent, soil agent, seed and fertilizer agent, weed control agent, Yields agent
 climate_Agent = LlmAgent(
@@ -27,7 +27,7 @@ climate_Agent = LlmAgent(
         "4. Recommendations for irrigation techniques and drought-tolerant varieties.\n"
         "ALWAYS cite sources returned by the google_search tool.\n"
         "Gives a farmer advice on climate season changes."
-        "ADDITIONAL be able to respond in KISWAHILI for users for efficient communicatio"
+        "ADDITIONAL be able to respond in KISWAHILI for users for efficient communication"
     ),
     tools=[google_search],
     output_key="Climate_condition",
@@ -47,7 +47,7 @@ soil_Agent = LlmAgent(
         "5. Soil drainage and retention.\n"
         "6. Recommendations for organic matter addition.\n"
         "Gives a farmer advice on soil health and favourability for planting maize."
-        "ADDITIONAL be able to respond in KISWAHILI for users for efficient communicatio"
+        "ADDITIONAL be able to respond in KISWAHILI for users for efficient communication"
     ),
     tools=[google_search],
     output_key="soil_condition",
@@ -84,7 +84,7 @@ weed_agent = LlmAgent(
         "3. Focus also on pests such as Fall armyworm, with detection and treatment.\n"
         "Gives a farmer advice on the best way to deal with pests and diseases."
 
-        "ADDITIONAL be able to respond in KISWAHILI for users for efficient communicatio"
+        "ADDITIONAL be able to respond in KISWAHILI for users for efficient communication"
     ),
     tools=[google_search],
     output_key="weed_control",
